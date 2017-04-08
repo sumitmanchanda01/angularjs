@@ -1,5 +1,5 @@
 <?php
-	require '../db_config.php';
+	require './db_config.php';
 	$post = file_get_contents('php://input');
 	$post = json_decode($post);
 	$sql = "INSERT INTO items (title,description) VALUES ('".$post->title."','".$post->description."')";
